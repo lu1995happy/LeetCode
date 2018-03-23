@@ -9,5 +9,9 @@ public class numberOfSegmentsInAString {
 				count++;
 		}
 		return count;
+		
+		// s = s.trim();
+		// if (s.length() == 0) return 0;
+		// return s.split("\\s+").length;
 	}
 }

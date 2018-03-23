@@ -1,7 +1,7 @@
 
 public class addStrings {
 	
-	// Time: O(n), Space: O(1);
+	// Time: O(n + m), Space: O(n);
 	public String addStrings (String num1, String num2) {
 		
 		if (num1 == null || num1.length() == 0)
