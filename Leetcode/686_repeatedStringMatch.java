@@ -11,30 +11,24 @@
  */
 
 public class repeatedStringMatch {
-	public static int isRepeatedStringMatch (String a, String b) {
-		if (a.contains(b)) {
-			return 1;
-		} else {
-			if ((a+a).contains(b)) {
-				return 2;
-			}
-		}
-		int count = 1;
-		String s = a;
-		while (!(s.contains(b))) {
-			if (s.length() - a.length() > b.length()) {
-				return -1;
-			}
-			s += a;
+	public static int repeatedStringMatch (String a, String b) {
+		StringBuilder sb = new StringBuilder();
+		int count = 0;
+		while (sb.length() < b.length()) {
+			sb.append(a);
 			count++;
 		}
-		return count;
+		if (sb.toString().contains(b))
+			return count;
+		if (sb.append(a).toString().contains(b))
+			return ++count;
+		return -1;
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(isRepeatedStringMatch("abcd","cdabcdab"));
-		System.out.println(isRepeatedStringMatch("abc","dcc"));
-		System.out.println(isRepeatedStringMatch("a","a"));
-		System.out.println(isRepeatedStringMatch("aa","a"));
+		System.out.println(repeatedStringMatch("abcd","cdabcdab"));
+		System.out.println(repeatedStringMatch("abc","dcc"));
+		System.out.println(repeatedStringMatch("a","a"));
+		System.out.println(repeatedStringMatch("aa","a"));
 	}
 }
