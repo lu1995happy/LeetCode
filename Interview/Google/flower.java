@@ -4,16 +4,16 @@ import java.lang.reflect.Array;
 public class flower {
   /*
    * 1. original
-   * 2. group m  °ÑÊý×éµ¹¹ýÀ´±éÀú ÏÈÓÃÒ»¸öset°Ñ0¸ún+1·Åµ½ÀïÃæÈ¥ ´ú±íÏÖÔÚ¿ª»¨×éÊÇ0µ½n+1 È»ºóÒÀ´Î½«»¨'±ÕºÏ' Ã¿´Î±ÕºÏµÄ»¨·Åµ½setÀïÃæÈ»ºóÕÒËûµÄÁÙ½ü±ÕºÏ»¨¿´¿´Õâ¶ä»¨±ÕºÏÓÐÃ»ÓÐ¿³¶ÏÒ»¸ö´óÓÚnµÄ¿ª»¨×é ¿´¿´ÊÇ¿³³ÉÁËÁ½¸ö»¹ÊÇÒ»¸ö»¹ÊÇÃ»±ä ÕâÑù¸´ÔÓ¶È¾ÍÊÇnlognÁË
-   * ÎÒunionfindÀïÃæÓÐparentºÍsizeÁ½¸öarray£¬parent³õÊ¼Öµ¶¼ÊÇ-1£¨±íÊ¾¶¼Ã»¿ª»¨£©£¬size³õÊ¼ÖµÊÇ1¡£ÎÒ±éÀúÁËÒ»ÏÂflower£¬Ã¿µ½Ò»¸öposition¾ÍÅÐ¶ÏÒ»ÏÂposition-1ºÍposition+1ÊÇ·ñ¿ª»¨£¬Èç¹û¶¼¿ª»¨ÄÇgroup-1£¬Èç¹ûÖ»ÓÐÒ»¸ö¿ª»¨ÄÇgroup²»±ä£¬Èç¹û¶¼²»¿ª»¨ÄÇ¾Ígroup+1.µ±group=MµÄÊ±ºò£¬ÔÙ±éÀúÒ»±éflowerÅÐ¶ÏÒÑ¿ª»¨µÄgroups£¨Ò²¾ÍÊÇsize[position]£©ÊÇ·ñÃ¿¸ö¶¼´óÓÚµÈÓÚk¡£²î²»¶à¾ÍÊÇÕâÑù¡«
+   * 2. group m  ï¿½ï¿½ï¿½ï¿½ï¿½éµ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½setï¿½ï¿½0ï¿½ï¿½n+1ï¿½Åµï¿½ï¿½ï¿½ï¿½ï¿½È¥ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0ï¿½ï¿½n+1 È»ï¿½ï¿½ï¿½ï¿½ï¿½Î½ï¿½ï¿½ï¿½'ï¿½Õºï¿½' Ã¿ï¿½Î±ÕºÏµÄ»ï¿½ï¿½Åµï¿½setï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù½ï¿½ï¿½ÕºÏ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä»¨ï¿½Õºï¿½ï¿½ï¿½Ã»ï¿½Ð¿ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½nï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¶È¾ï¿½ï¿½ï¿½nlognï¿½ï¿½
+   * ï¿½ï¿½unionfindï¿½ï¿½ï¿½ï¿½ï¿½ï¿½parentï¿½ï¿½sizeï¿½ï¿½ï¿½ï¿½arrayï¿½ï¿½parentï¿½ï¿½Ê¼Öµï¿½ï¿½ï¿½ï¿½-1ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sizeï¿½ï¿½Ê¼Öµï¿½ï¿½1ï¿½ï¿½ï¿½Ò±ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½flowerï¿½ï¿½Ã¿ï¿½ï¿½Ò»ï¿½ï¿½positionï¿½ï¿½ï¿½Ð¶ï¿½Ò»ï¿½ï¿½position-1ï¿½ï¿½position+1ï¿½Ç·ñ¿ª»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½group-1ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½groupï¿½ï¿½ï¿½ä£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½group+1.ï¿½ï¿½group=Mï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ù±ï¿½ï¿½ï¿½Ò»ï¿½ï¿½flowerï¿½Ð¶ï¿½ï¿½Ñ¿ï¿½ï¿½ï¿½ï¿½ï¿½groupsï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½size[position]ï¿½ï¿½ï¿½Ç·ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½kï¿½ï¿½ï¿½î²»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 WeightedQuickUnionUF
-   * 3. last day µÚ¶þÌâÈç¹ûÌâÒâÃ»Àí½â´íµÄ»°£¬Ã²ËÆ¿ÉÒÔÄæÏòÇó½â¡£±ÈÈç×îºóÒ»Ìì¿ª»¨µÄÇø¼ä[1£¬n]¡£Èç¹û×îºóÒ»Ìì¿ª»¨µÄÎ»ÖÃÔÚx£¬Ôòµ¹ÊýµÚ¶þÌìµÄ¿ª»¨Çø¼äÊÇ[1, x - 1], [x + 1, n]¡£ÄæÏò±éÀú£¬·Ö½âÒÑÓÐÇø¼ä£¬Óöµ½µÚÒ»¸öÂú×ãÌõ¼þµÄ¼´ÎªËùµÃ¡£
+   * 3. last day ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½Ã²ï¿½Æ¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â¡£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ì¿ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[1ï¿½ï¿½n]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ì¿ªï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[1, x - 1], [x + 1, n]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Îªï¿½ï¿½ï¿½Ã¡ï¿½
    * 
-µÚ¶þÌâÊÇ·ñ¿ÉÒÔÕâÑù×ö£ºÄæÐò¿¼ÂÇ¡£ÀûÓÃÒ»¸öset <pair<int,int>> s Î¬»¤µ±Ç°ÒÑ¾­¿ª»¨µÄÇø¼ä£¬³õÊ¼Îª{<0,N-1>}£¬³õÊ¼»¯>=KµÄÇø¼äÊý¼ÇÎªcnt=(N>=K)£»
-ÄæÐò±éÀúÊý×é£¬±éÀúµ½µÚi¸öÎ»ÖÃÊ±£¬it = s.upper_bound ({a[i], a[i]}); it--; ·ÖÁÑ it Çø¼äÎª<it->first, a[i]-1>, <a[i]+1, it->second>£¬Í¬Ê±¸üÐÂcnt£¬ µ±cnt >= MµÚÒ»´ÎÂú×ãÊ±¶ÔÓ¦µÄÏÂ±ê¾ÍÊÇ´ð°¸
+ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¡ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½set <pair<int,int>> s Î¬ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä£¬ï¿½ï¿½Ê¼Îª{<0,N-1>}ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½>=Kï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªcnt=(N>=K)ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½ï¿½Î»ï¿½ï¿½Ê±ï¿½ï¿½it = s.upper_bound ({a[i], a[i]}); it--; ï¿½ï¿½ï¿½ï¿½ it ï¿½ï¿½ï¿½ï¿½Îª<it->first, a[i]-1>, <a[i]+1, it->second>ï¿½ï¿½Í¬Ê±ï¿½ï¿½ï¿½ï¿½cntï¿½ï¿½ ï¿½ï¿½cnt >= Mï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Â±ï¿½ï¿½ï¿½Ç´ï¿½
 
-1. ´ÓºóÍùÇ°É¨£¬ÓÃTreeSetÀ´¼ÇÂ¼Î´¿ª»¨µÄÎ»ÖÃ£¬È»ºóÕÒÉÏÒ»¸öºÍÏÂÒ»¸öÎ´¿ª»¨µÄÎ»ÖÃ£¨°üÀ¨±ß½ç£©£¬¸üÐÂ´óÓÚµÈÓÚKµÄ»¨¶ÑÊý£¬ÕÒµ½·ûºÏÌõ¼þµÄµÚÒ»¸öÈÕÆÚ¾Í·µ»Ø£¬ÕâÖÖ½â·¨Ê±¼äÓ¦¸ÃÊÇnlogn
-2. ´ÓÇ°ÍùºóÉ¨£¬ÓÃÒ»¸öÐÂµÄµÈ³¤µÄarrayÀ´¼ÇÂ¼Á¬Ðø¿ª»¨»¨¶ÑµÄsize£¬Ã¿¿ªÒ»¶ä»¨¾Í¿ÉÒÔÖªµÀ×óÓÒÏàÁÚ»¨¶ÑµÄsize£¬È»ºó¼ÆËã³ö¿ª»¨ºóÐÂ»¨¶ÑµÄ³¤¶È£¬¸üÐÂÐÂ»¨¶ÑsegmentÁ½¶ËµãµÄÖµ£¬Í¬²½¸üÐÂ´óÓÚµÈÓÚKµÄ»¨¶ÑÊý£¬ÓÐ·ûºÏÌõ¼þµÄÈÕÆÚ¾Í¸üÐÂ£¬ÒòÎªÊÇ×îÍíÈÕÆÚ£¬ÕâÖÖ½â·¨ÒªÉ¨ÍêÕû¸öarray£¬Ê±¼ä¸´ÔÓ¶È¿ÉÒÔO(n)
+1. ï¿½Óºï¿½ï¿½ï¿½Ç°É¨ï¿½ï¿½ï¿½ï¿½TreeSetï¿½ï¿½ï¿½ï¿½Â¼Î´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã£ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß½ç£©ï¿½ï¿½ï¿½ï¿½ï¿½Â´ï¿½ï¿½Úµï¿½ï¿½ï¿½Kï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ú¾Í·ï¿½ï¿½Ø£ï¿½ï¿½ï¿½ï¿½Ö½â·¨Ê±ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½nlogn
+2. ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½É¨ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ÂµÄµÈ³ï¿½ï¿½ï¿½arrayï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½sizeï¿½ï¿½Ã¿ï¿½ï¿½Ò»ï¿½ä»¨ï¿½Í¿ï¿½ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú»ï¿½ï¿½Ñµï¿½sizeï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â»ï¿½ï¿½ÑµÄ³ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â»ï¿½ï¿½ï¿½segmentï¿½ï¿½ï¿½Ëµï¿½ï¿½Öµï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½Â´ï¿½ï¿½Úµï¿½ï¿½ï¿½Kï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¾Í¸ï¿½ï¿½Â£ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½Ö½â·¨ÒªÉ¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½arrayï¿½ï¿½Ê±ï¿½ä¸´ï¿½Ó¶È¿ï¿½ï¿½ï¿½O(n)
    */
 	
 
@@ -55,7 +55,6 @@ WeightedQuickUnionUF
 	    }
 	    public static void main(String[] args) {
 	        int[] input = {2,1,5,4,7,8,3,6};
-	        r r r r r 0 r r
 	        int k = 2;
 	        int m = 2;
 	        System.out.println(latest(input, k, m));
